@@ -3,11 +3,8 @@ let subtitulo = document.querySelector(".subtitulo");
 let link = document.querySelector("a");
 let parrafos = document.querySelectorAll("p");
 
-let nombre = prompt("Ingrese su nombre:");
-
-nombre
-  ? (subtitulo.innerHTML += " " + nombre)
-  : (subtitulo.innerHTML += " Invitado");
+let nombre = prompt("Ingrese su nombre:") || "INVITADO";
+subtitulo.innerHTML += " " + nombre;
 
 subtitulo.style.textTransform = "uppercase";
 
